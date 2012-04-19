@@ -1,0 +1,16 @@
+{% load section_helpers %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Winterset Madisonian</title>
+</head>
+<link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<body>
+    {% section_menu section_view='section_view' sections=mad_sections template='navigation/sections.html' %}
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div> <!--! end of #container -->
+    <!-- JavaScript at the bottom for fast page loading -->
+</body>
+</html>

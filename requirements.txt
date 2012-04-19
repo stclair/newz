@@ -1,0 +1,16 @@
+armstrong.core.arm_access
+armstrong.core.arm_content
+armstrong.core.arm_layout
+armstrong.core.arm_sections
+armstrong.core.arm_wells
+armstrong.apps.articles
+armstrong.apps.content
+armstrong.apps.images
+armstrong.apps.related_content
+armstrong.hatband
+django-reversion
+django-mptt
+django-taggit
+
+mysql-python
+South
