@@ -1,7 +1,7 @@
-<div class='article-half' style='float:left; width:45%; margin-right: 5%'>
+<div>
     <h4>{{ object.title }}{% if object.access.is_protected %} ($){% endif %}</h4>
     {% autoescape off %}
-    <p style='font-size: smaller'>
+    <p>
         {{ object.summary }}
         <a href="{% url article_detail slug=object.slug %}">Show more</a>
     </p>
