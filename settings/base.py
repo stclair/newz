@@ -171,3 +171,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("madisonian.context.mad_sections",
                                "django.core.context_processors.media",
                                "django.core.context_processors.static",
                                "django.contrib.messages.context_processors.messages")
+
+ARMSTRONG_SECTION_ITEM_BACKEND = "madisonian.section_item_filter.MadItemFilter"
+
+MAD_NUM_DAYS_TO_DISPLAY = 14
