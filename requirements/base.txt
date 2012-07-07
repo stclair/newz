@@ -14,4 +14,3 @@ django-taggit
 
 mysql-python
 South
-django-debug-toolbar

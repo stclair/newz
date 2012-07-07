@@ -31,7 +31,6 @@ class Command(BaseCommand):
             section_models.Section.objects.create(title=section.section, slug=slug)
 
     def convert_articles(self):
-        pass
         for news in mad_models.News.objects.filter(issue_date__gt=datetime.date(2011,12,31)):
             slug = re.sub(r"\W", "", news.caption.lower())
             if not slug:
