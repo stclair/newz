@@ -1,0 +1,36 @@
+{
+    "run_list": [
+        "madisonian",
+        "madisonian::apache"
+    ],
+
+    "base_packages": [
+        "git-core",
+        "build-essential",
+        "python-setuptools",
+        "python-dev",
+        "memcached",
+        "mysql-server",
+        "libmysqlclient-dev"
+    ],
+    "easy_install_packages": [
+        "pip"
+    ],
+    "pip_packages": [
+        "virtualenv"
+    ],
+
+    "wsgi_apps": [
+        {
+            "production": "true",
+            "parent_path":"/home/ubuntu/",
+            "path":"www/",
+            "name":"news",
+            "domain":"wintersetmadisonian.com",
+            "media_dir":"madisonian/static",
+            "static_dir":"madisonian/static",
+            "wsgi_script":"wsgi.py",
+            "logs_dir":"logs"
+        }
+    ]
+}
