@@ -1,7 +1,8 @@
 {
     "run_list": [
         "madisonian",
-        "madisonian::apache"
+        "madisonian::apache",
+        "madisonian::mysql"
     ],
 
     "base_packages": [
@@ -9,9 +10,7 @@
         "build-essential",
         "python-setuptools",
         "python-dev",
-        "memcached",
-        "mysql-server",
-        "libmysqlclient-dev"
+        "memcached"
     ],
     "easy_install_packages": [
         "pip"
