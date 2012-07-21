@@ -31,5 +31,17 @@
             "wsgi_script":"wsgi.py",
             "logs_dir":"logs"
         }
-    ]
+    ],
+
+    "webapp_db": {
+        "mysql": {
+            "root_password_store": "arrakis",
+            "users": [
+                {
+                    "name": "madisonian",
+                    "password_store": "madisonian"
+                }
+            ]
+        }
+    }
 }
