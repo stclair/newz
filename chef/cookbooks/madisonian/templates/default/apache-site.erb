@@ -1,6 +1,6 @@
 <VirtualHost *:80>
-    ServerName <%= @app[:name] %>.<%= @app[:domain] %>:80
-    ServerAdmin webadmin@imtapps.com
+    ServerName <%= @app[:url] %>:80
+    ServerAdmin web@wintersetmadisonian.com
     DocumentRoot <%= @app[:parent_path] %><%= @app[:path] %><%= @app[:media_dir] %>
 
     Alias /static/ <%= @app[:parent_path] %><%= @app[:path] %><%= @app[:media_dir] %>/
@@ -19,7 +19,7 @@
         allow from all
     </Directory>
 
-    WSGIScriptAlias / <%= @app[:parent_path] %><%= @app[:path] %><%= @app[:wsgi_script] %>
+    WSGIScriptAlias / <%= @app[:parent_path] %><%= @app[:path] %><%= @app[:name] %><%= @app[:wsgi_script] %>
     LogLevel warn
 
     WSGIDaemonProcess <%= @app[:name] %> processes=2 threads=15 display-name=%{GROUP} python-path=<%= @app[:parent_path] %><%= @app[:path] %>virtualenv/lib/python2.7/site-packages:<%= @app[:parent_path] %><%= @app[:path] %>
