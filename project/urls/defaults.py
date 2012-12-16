@@ -19,7 +19,7 @@ admin.autodiscover()
 
 paywall = SubscriptionPaywall(permission_denied=render_on_deny('permission_denied.html'))
 
-from .utils import get_url_for_model
+from urls.utils import get_url_for_model
 
 urlpatterns = patterns('',
     # Examples:

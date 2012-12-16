@@ -9,7 +9,7 @@ in urls.defaults is available here as well.
 See ``urls.defaults`` for a list of all URLs available across both
 configurations.
 """
-from .defaults import *
+from .urls.defaults import *
 
 urlpatterns += patterns('',
 

@@ -8,13 +8,12 @@ from armstrong.apps.articles import models as article_models
 from armstrong.core.arm_sections import models as section_models
 from armstrong.core.arm_wells import models as well_models
 
-from madisonian import models as mad_models
-
 # Need to convert:
 #
 # 1. Sections
 # 2. News
 # 3. Users
+from madisonian import models as mad_models
 
 class Command(BaseCommand):
 
