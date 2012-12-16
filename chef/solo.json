@@ -1,8 +1,20 @@
 {
     "run_list": [
+        "recipe[apache2]",
+        "recipe[apache2::mod_wsgi]",
+
         "madisonian",
         "madisonian::apache",
         "madisonian::mysql"
+    ],
+
+    "apache": {
+        "contact": "wes.stclair@gmail.com",
+        "listen_ports": ["80"]
+    },
+
+    "wsgi_applications": [
+        "news.wintersetmadisonian.com"
     ],
 
     "base_packages": [
@@ -39,7 +51,7 @@
             "users": [
                 {
                     "name": "madisonian",
-                    "password_store": "madisonian"
+                    "password": "o8685gtfqdyn8gy8573t"
                 }
             ]
         }

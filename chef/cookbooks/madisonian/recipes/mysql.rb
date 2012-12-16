@@ -32,11 +32,11 @@ if mysql
         # drop the user
         execute "drop-user" do
             ignore_failure true
-            command db_cmd % ['drop user '+user['name']]
+            command db_cmd % ['drop user '+user['name']+'@localhost']
         end
 
         # create the user
-        execute db_cmd % ["create user "+user['name']+"@localhost identified by 'test'"]
+        execute db_cmd % ["create user "+user['name']+"@localhost identified by '"+user['password']+"'"]
     end
 end
 
